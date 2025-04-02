@@ -1,15 +1,15 @@
-# Princípio da Substituição de Liskov (LSP)
+# Princípio da Substituição de Liskov (LSP) 
 
 O **Princípio da Substituição de Liskov (Liskov Substitution Principle - LSP)** é um dos cinco princípios do SOLID e define que **uma subclasse deve poder ser utilizada no lugar da sua classe base sem alterar o comportamento esperado do programa**.
 
 Ou seja, qualquer classe derivada deve manter a integridade das regras de comportamento da classe base. Se uma subclasse altera o comportamento esperado, violando contratos da superclasse, o LSP está sendo desrespeitado.
 
 ## Estrutura do Repositório
-O repositório contém dois casos de estudo que inicialmente violam o LSP e depois são corrigidos.
+O repositório contém três casos de estudo que inicialmente violam o LSP e depois são corrigidos.
 
 ### **Case 1: Retângulo vs. Quadrado**
 **Problema:**
-- A classe `Square` herda de `Rectangle`, mas um quadrado tem a restrição de que largura e altura devem ser iguais.
+- A classe `Square` herda de `Rectangle`, mas um quadrado tem a restrição de que largura e altura devem ser iguais. 
 - Quando um `Square` é usado como um `Rectangle`, alterações de largura ou altura geram comportamento inesperado.
 
 **Pacotes:**
@@ -26,6 +26,17 @@ O repositório contém dois casos de estudo que inicialmente violam o LSP e depo
 **Pacotes:**
 - `case2.problem` - Contém a implementação incorreta que viola o LSP.
 - `case2.solution` - Contém a implementação corrigida, onde pássaros que voam e não voam são tratados de forma separada.
+
+---
+
+### **Case 3: Conta Bancária vs. Conta Somente Leitura**
+**Problema:**
+- A classe `BankAccount` permite saques e depósitos.
+- A subclasse `ReadOnlyAccount` herda de `BankAccount`, mas sobrescreve `withdraw()` lançando uma exceção, o que viola o LSP.
+
+**Pacotes:**
+- `case3.problem` - Contém a implementação incorreta que viola o LSP.
+- `case3.solution` - Contém a implementação corrigida, onde `ReadOnlyAccount` utiliza composição ao invés de herança.
 
 ## Como Executar os Casos
 1. Clone o repositório.
