@@ -45,3 +45,5 @@ O repositório contém três casos de estudo que inicialmente violam o LSP e dep
 ## Conclusão
 O Princípio da Substituição de Liskov é essencial para garantir que subclasses sejam realmente substituíveis pelas superclasses sem introduzir comportamentos inesperados. Ao aplicar o LSP corretamente, criamos código mais previsível, modular e de fácil manutenção.
 
+📌 **Autor:** Danilo Takeo Kanizawa
+
