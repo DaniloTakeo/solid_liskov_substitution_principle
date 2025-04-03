@@ -5,7 +5,7 @@ O **Princípio da Substituição de Liskov (Liskov Substitution Principle - LSP)
 Ou seja, qualquer classe derivada deve manter a integridade das regras de comportamento da classe base. Se uma subclasse altera o comportamento esperado, violando contratos da superclasse, o LSP está sendo desrespeitado.
 
 ## Estrutura do Repositório
-O repositório contém três casos de estudo que inicialmente violam o LSP e depois são corrigidos.
+O repositório contém quatro casos de estudo que inicialmente violam o LSP e depois são corrigidos.
 
 ### **Case 1: Retângulo vs. Quadrado**
 **Problema:**
@@ -37,6 +37,15 @@ O repositório contém três casos de estudo que inicialmente violam o LSP e dep
 **Pacotes:**
 - `case3.problem` - Contém a implementação incorreta que viola o LSP.
 - `case3.solution` - Contém a implementação corrigida, onde `ReadOnlyAccount` utiliza composição ao invés de herança.
+
+### **Case 4: Veículos com Motor a Combustão vs. Veículos Elétricos**
+**Problema:**
+- A classe `Car` possui um método `refuel()`, mas nem todos os veículos precisam de combustível (exemplo: carros elétricos).
+- A subclasse `ElectricCar` sobrescreve `refuel()` lançando uma exceção, o que viola o LSP.
+
+**Pacotes:**
+- `case4.problem` - Contém a implementação incorreta que viola o LSP.
+- `case4.solution` - Contém a implementação corrigida, onde `ElectricCar` e `GasolineCar` são tratados de forma separada utilizando interfaces.
 
 ## Como Executar os Casos
 1. Clone o repositório.
