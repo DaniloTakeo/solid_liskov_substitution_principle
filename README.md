@@ -38,6 +38,8 @@ O repositório contém quatro casos de estudo que inicialmente violam o LSP e de
 - `case3.problem` - Contém a implementação incorreta que viola o LSP.
 - `case3.solution` - Contém a implementação corrigida, onde `ReadOnlyAccount` utiliza composição ao invés de herança.
 
+---
+
 ### **Case 4: Veículos com Motor a Combustão vs. Veículos Elétricos**
 **Problema:**
 - A classe `Car` possui um método `refuel()`, mas nem todos os veículos precisam de combustível (exemplo: carros elétricos).
